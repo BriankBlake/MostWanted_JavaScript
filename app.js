@@ -321,7 +321,7 @@ function multipleTraitSearch(people) {
 }
 //function to search by people's DOB
  function searchByDOB(people){
-  let dobInput = promptFor("Enter in the date of birth in the following format 'MM/DD/YYYY' for double digit months (e.g. 12/18/1952) or 'M/DD/YYYY' for single digit months (e.g. 1/18/1949)", autoValid);
+  let dobInput = promptFor("Enter in the date of birth in the following format 'MM/DD/YYYY' for double digit months (e.g. 12/18/1952) or 'M/DD/YYYY' for single digit months (e.g. 1/18/1949) or M/D/YYYY' for single digit day (e.g 5/9/1987)", autoValid);
   let confirmedDOB = people.filter(function(element) {
     if(element.dob == dobInput) {
       return true;
