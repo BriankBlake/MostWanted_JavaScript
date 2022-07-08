@@ -114,7 +114,7 @@ function searchListOfTraits(people) {
     case "B":
       listofPeople = searchByGender(people);
       if(listofPeople.length == "0"){
-      alert("No person have been found. Let's do an other trait search again.");
+      alert("Didn't find a person have that trait. Let's do an other trait search again.");
       searchListOfTraits(people);
       }
       else if(listofPeople.length == 1){
