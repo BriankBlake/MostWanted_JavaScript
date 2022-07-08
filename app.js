@@ -226,7 +226,7 @@ function chars(input) {
 //Function for multiple trait search
 let traitCount = 0;
 function multipleTraitSearch(people) {
-  let traitSelection = promptFor("Enter in a maximum of 5 traits. Select a letter for one of the following traits. Press 'X' when done with your traits search:\n A: dob\n B: gender\n C: height\n D: weight\n E: eye color\n F: occupation\n X: Done Searching", autoValid);
+  let traitSelection = promptFor("The max number of traits to pick is 5. Select a letter for one of the following traits. Press 'X' when done with your traits search:\n A: dob\n B: gender\n C: height\n D: weight\n E: eye color\n F: occupation\n X: Done Searching", autoValid);
   let listofPeople = [];
   let confirmedPerson = [];
   switch(traitSelection) {
