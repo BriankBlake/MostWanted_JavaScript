@@ -38,7 +38,7 @@ function app(people){
 function mainMenu(person, people){
 /* Here we pass in the entire person object that we found in our search, as well as the entire original dataset of people. We need people in order to find descendants and other information that the user may want. */
   if(!person){
-    alert("Could not find that individual.");
+    alert("Could not find that person.");
     return app(people); // restart
   }
 
@@ -300,7 +300,7 @@ function multipleTraitSearch(people) {
     case "G":
       if (people.length == 1){
         confirmedPerson = people[0];
-        alert(`There was only a single person that was found, and push Ok to keep going.\n\n${displayPeople(people)}`);
+        alert(`There was only a single person that was found. Push Ok to keep going.\n\n${displayPeople(people)}`);
         mainMenu(confirmedPerson, people);
       }
       else if (people.length == 0){
@@ -350,7 +350,7 @@ function searchByGender(people){
 
 //function to search by people's height
 function searchByHeight(people){
-  let heightInput = promptFor("Enter in the height in inches. For example, '71'.", autoValid);
+  let heightInput = promptFor("Enter in the height in inches. For example, '65'.", autoValid);
   let confirmedHeight = people.filter(function(element) {
     if(element.height == heightInput) {
       return true;
@@ -365,7 +365,7 @@ function searchByHeight(people){
 
 //funciton to search by people's weight
  function searchByWeight(people) {
-  let weightInput = promptFor("Enter in the weight in pounds. For example, '175'.", autoValid);
+  let weightInput = promptFor("Enter in the weight in pounds. For example, '196'.", autoValid);
   let confirmedWeight = people.filter(function(element) {
     if(element.weight == weightInput) {
       return true;
@@ -380,7 +380,7 @@ function searchByHeight(people){
 
 //function to search people by their eye color
 function searchByEyeColor(people){
-  let eyeColorInput = promptFor("Enter in the eye color. For example, 'brown'.", autoValid).toLowerCase();
+  let eyeColorInput = promptFor("Enter in the eye color. For example, 'blue'.", autoValid).toLowerCase();
   let confirmedEyeColor = people.filter(function(element) {
     if(element.eyeColor == eyeColorInput) {
       return true;
