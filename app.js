@@ -394,7 +394,7 @@ function searchByEyeColor(people){
 
 //function to search people by their occupation
 function searchByOccupation(people){
-  let occupationInput = promptFor("Enter in the occupation. For example, 'programmer'.", autoValid).toLowerCase();
+  let occupationInput = promptFor("Enter in the occupation. For example, 'doctor'.", autoValid).toLowerCase();
   let confirmedOccupation = people.filter(function(element) {
     if(element.occupation == occupationInput) {
       return true;
