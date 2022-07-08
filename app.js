@@ -234,7 +234,7 @@ function multipleTraitSearch(people) {
       traitCount += 1;
       
       if (traitCount == "6"){
-        alert(`6 is an invalid pick.\n\n${displayPeople(people)}`);
+        alert(`6 is an invalid.\n\n${displayPeople(people)}`);
         app(people);
       }
       else{
@@ -245,7 +245,7 @@ function multipleTraitSearch(people) {
     case "B":
       traitCount += 1;
       if (traitCount == "6"){
-        alert(`6 is an invalid pick.\n\n${displayPeople(people)}`);
+        alert(`6 is an invalid.\n\n${displayPeople(people)}`);
         app(people);
       }
       else{
@@ -256,7 +256,7 @@ function multipleTraitSearch(people) {
     case "C":
       traitCount += 1;
       if (traitCount == "6"){
-        alert(`6 is an invalid pick.\n\n${displayPeople(people)}`);
+        alert(`6 is an invalid.\n\n${displayPeople(people)}`);
         app(people);
       }
       else{
@@ -267,7 +267,7 @@ function multipleTraitSearch(people) {
     case "D":
       traitCount += 1;
       if (traitCount == "6"){
-        alert(`6 is an invalid pick.\n\n${displayPeople(people)}`);
+        alert(`6 is an invalid.\n\n${displayPeople(people)}`);
         app(people);
       }
       else{
@@ -278,7 +278,7 @@ function multipleTraitSearch(people) {
     case "E":
       traitCount += 1;
       if (traitCount == "6"){
-        alert(`6 is an invalid pick.\n\n${displayPeople(people)}`);
+        alert(`6 is an invalid.\n\n${displayPeople(people)}`);
         app(people);
       }
       else{
@@ -289,7 +289,7 @@ function multipleTraitSearch(people) {
     case "F":
       traitCount += 1;
       if (traitCount == "6"){
-        alert(`6 is an invalid pick.\n\n${displayPeople(people)}`);
+        alert(`6 is an invalid.\n\n${displayPeople(people)}`);
         app(people);
       }
       else{
