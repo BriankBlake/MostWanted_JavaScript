@@ -1,6 +1,5 @@
 "use strict"
 
-
 //Menu functions.
 //Used for the overall flow of the application.
 /////////////////////////////////////////////////////////////////
@@ -187,7 +186,7 @@ function searchListOfTraits(people) {
       mainMenu(confirmedPerson, people);
       }
       else{
-      alert(`The list of person(s) you search for. Push Ok to keep going\n\n${displayPeople(listofPeople)}`, autoValid);
+      alert(`The list of person(s) you search for. Push Ok to keep going.\n\n${displayPeople(listofPeople)}`, autoValid);
       app(people);
       }
     break;
@@ -198,19 +197,44 @@ function searchListOfTraits(people) {
   }
  }
 
+// End of promptFor()
+
+/**
+ * This helper function checks to see if the value passed into input is a "yes" or "no."
+ * @param {String} input        A string that will be normalized via .toLowerCase().
+ * @returns {Boolean}           The result of our condition evaluation.
+ */
+ function yesNo(input) {
+    return input.toLowerCase() === "yes" || input.toLowerCase() === "no";
+}
+// End of yesNo()
+
+/**
+ * This helper function operates as a default callback for promptFor's validation.
+ * Feel free to modify this to suit your needs.
+ * @param {String} input        A string.
+ * @returns {Boolean}           Default validation -- no logic yet.
+ */
+function chars(input) {
+    return true; // Default validation only
+}
+// End of chars()
+
+//////////////////////////////////////////* End Of Starter Code *//////////////////////////////////////////
+// Any additional functions can be written below this line 👇. Happy Coding! 
 
 //Function for multiple trait search
 let traitCount = 0;
 function multipleTraitSearch(people) {
-  let traitSelection = promptFor("Enter in a maximum of 5 traits. Select a number for one of the following traits. Press 'X' when done with your traits search:\n A: dob\n B: gender\n C: height\n D: weight\n E: eye color\n F: occupation\n X: Done Searching", autoValid);
+  let traitSelection = promptFor("Enter in a maximum of 5 traits. Select a letter for one of the following traits. Press 'X' when done with your traits search:\n A: dob\n B: gender\n C: height\n D: weight\n E: eye color\n F: occupation\n X: Done Searching", autoValid);
   let listofPeople = [];
   let confirmedPerson = [];
   switch(traitSelection) {
-    case "1":
+    case "A":
       traitCount += 1;
       
       if (traitCount == "6"){
-        alert(`Sorry 6 is more than maximum that is aloud. The following are the results from your five searches.\n\n${displayPeople(people)}`);
+        alert(`6 is an invalid pick.\n\n${displayPeople(people)}`);
         app(people);
       }
       else{
@@ -218,10 +242,10 @@ function multipleTraitSearch(people) {
       multipleTraitSearch(listofPeople);
       }
     break;
-    case "2":
+    case "B":
       traitCount += 1;
       if (traitCount == "6"){
-        alert(`Sorry your trait selection was more than five. The following are the results from your five searches.\n\n${displayPeople(people)}`);
+        alert(`6 is an invalid pick.\n\n${displayPeople(people)}`);
         app(people);
       }
       else{
@@ -229,10 +253,10 @@ function multipleTraitSearch(people) {
       multipleTraitSearch(listofPeople);
       }
     break;
-    case "3":
+    case "C":
       traitCount += 1;
       if (traitCount == "6"){
-        alert(`Sorry your trait selection was more than five. The following are the results from your five searches.\n\n${displayPeople(people)}`);
+        alert(`6 is an invalid pick.\n\n${displayPeople(people)}`);
         app(people);
       }
       else{
@@ -240,10 +264,10 @@ function multipleTraitSearch(people) {
       multipleTraitSearch(listofPeople);
       }
     break;
-    case "4":
+    case "D":
       traitCount += 1;
       if (traitCount == "6"){
-        alert(`Sorry your trait selection was more than five. The following are the results from your five searches.\n\n${displayPeople(people)}`);
+        alert(`6 is an invalid pick.\n\n${displayPeople(people)}`);
         app(people);
       }
       else{
@@ -251,10 +275,10 @@ function multipleTraitSearch(people) {
       multipleTraitSearch(listofPeople);
       }
     break;
-    case "5":
+    case "E":
       traitCount += 1;
       if (traitCount == "6"){
-        alert(`Sorry your trait selection was more than five. The following are the results from your five searches.\n\n${displayPeople(people)}`);
+        alert(`6 is an invalid pick.\n\n${displayPeople(people)}`);
         app(people);
       }
       else{
@@ -262,10 +286,10 @@ function multipleTraitSearch(people) {
       multipleTraitSearch(listofPeople);
       }
     break;
-    case "6":
+    case "F":
       traitCount += 1;
       if (traitCount == "6"){
-        alert(`Sorry your trait selection was more than five. The following are the results from your five searches.\n\n${displayPeople(people)}`);
+        alert(`6 is an invalid pick.\n\n${displayPeople(people)}`);
         app(people);
       }
       else{
@@ -273,18 +297,18 @@ function multipleTraitSearch(people) {
       multipleTraitSearch(listofPeople);
       }
     break;
-    case "7":
+    case "G":
       if (people.length == 1){
         confirmedPerson = people[0];
-        alert(`Congrats. Your search returned a single person. You'll be sent to the menu options upon clicking OK.\n\n${displayPeople(people)}`);
+        alert(`There was only a single person that was found, and push Ok to keep going.\n\n${displayPeople(people)}`);
         mainMenu(confirmedPerson, people);
       }
       else if (people.length == 0){
-        alert("No person(s) have all of the traits that you entered.")
+        alert("Didn't find a person have that trait you put in. Let's do an other trait search again.")
         app(people);
       }
       else{
-        alert(`Here is the list of people based on your search. You'll be asked if you know the name of the person upon entering OK.\n\n${displayPeople(people)}`, autoValid);
+        alert(`The list of person(s) you search for. Push Ok to keep going.\n\n${displayPeople(people)}`, autoValid);
         app(people);
       }
     break;
