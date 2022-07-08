@@ -98,96 +98,96 @@ function searchListOfTraits(people) {
     case "A":
       listofPeople = searchByDOB(people);
       if(listofPeople.length == 0){
-      alert("No person has this specific trait. Let's do a single trait search again.");
+      alert("Didn't find a person have that trait you put in. Let's do an other trait search again.");
       searchListOfTraits(people);
       }
       else if(listofPeople.length == 1){
       confirmedPerson = listofPeople[0];
-      alert(`The letter pick in your search returned a single person. If you want to keep going then click Ok.\n\n${displayPeople(listofPeople)}`);
+      alert(`The letter pick in your search returned a single person. If you want to keep going then push Ok to keep going.\n\n${displayPeople(listofPeople)}`);
       mainMenu(confirmedPerson, people);
       }
       else{
-      alert(`Here is the list of person(s) based on your search. If you know the name of the person upon entering click Ok.\n\n${displayPeople(listofPeople)}`, autoValid);
+      alert(`The list of person(s) you search for, push Ok to keep going.\n\n${displayPeople(listofPeople)}`, autoValid);
       app(people);
       }
     break;
     case "B":
       listofPeople = searchByGender(people);
       if(listofPeople.length == "0"){
-      alert("Didn't find a person have that trait. Let's do an other trait search again.");
+      alert("Didn't find a person have that trait you put in. Let's do an other trait search again.");
       searchListOfTraits(people);
       }
       else if(listofPeople.length == 1){
       confirmedPerson = listofPeople[0];
-      alert(`Congrats. Your search returned a single person. You'll be sent to the menu options upon clicking OK.\n\n${displayPeople(listofPeople)}`);
+      alert(`There was only a single person that was found. Push Ok to keep going.\n\n${displayPeople(listofPeople)}`);
       mainMenu(confirmedPerson, people);
       }
       else{
-      alert(`Here is the list of person(s) based on your search. You'll be asked if you know the name of the person upon entering OK.\n\n${displayPeople(listofPeople)}`, autoValid);
+      alert(`The list of person(s) you search for. Push Ok to keep going.\n\n${displayPeople(listofPeople)}`, autoValid);
       app(people);
       }
     break;
     case "C":
       listofPeople = searchByHeight(people);
       if(listofPeople.length == "0"){
-      alert("No person has this specific trait. Let's do a single trait search again.");
+      alert("Didn't find a person have that trait you put in. Let's do an other trait search again.");
       searchListOfTraits(people);
       }
       else if(listofPeople.length == 1){
       confirmedPerson = listofPeople[0];
-      alert(`Congrats. Your search returned a single person. You'll be sent to the menu options upon clicking OK.\n\n${displayPeople(listofPeople)}`);
+      alert(`There was only a single person that was found. Push Ok to keep going.\n\n${displayPeople(listofPeople)}`);
       mainMenu(confirmedPerson, people);
       }
       else{
-      alert(`Here is the list of person(s) based on your search. You'll be asked if you know the name of the person upon entering OK.\n\n${displayPeople(listofPeople)}`, autoValid);
+      alert(`The list of person(s) you search for. Push Ok to keep going.\n\n${displayPeople(listofPeople)}`, autoValid);
       app(people);
       }
     break;
     case "D":
       listofPeople = searchByWeight(people);
       if(listofPeople.length == "0"){
-      alert("No person has this specific trait. Let's do a single trait search again.");
+      alert("Didn't find a person have that trait you put in. Let's do an other trait search again.");
       searchListOfTraits(people);
       }
       else if(listofPeople.length == 1){
       confirmedPerson = listofPeople[0];
-      alert(`Congrats. Your search returned a single person. You'll be sent to the menu options upon clicking OK.\n\n${displayPeople(listofPeople)}`);
+      alert(`There was only a single person that was found. Push Ok to keep going.\n\n${displayPeople(listofPeople)}`);
       mainMenu(confirmedPerson, people);
       }
       else{
-      alert(`Here is the list of person(s) based on your search. You'll be asked if you know the name of the person upon entering OK.\n\n${displayPeople(listofPeople)}`, autoValid);
+      alert(`The list of person(s) you search for. Push Ok to keep going.\n\n${displayPeople(listofPeople)}`, autoValid);
       app(people);
       }
     break;
     case "E":
       listofPeople = searchByEyeColor(people);
       if(listofPeople.length == "0"){
-      alert("No person has this specific trait. Let's do a single trait search again.");
+      alert("Didn't find a person have that trait you put in. Let's do an other trait search again.");
       searchListOfTraits(people);
       }
       else if(listofPeople.length == 1){
       confirmedPerson = listofPeople[0];
-      alert(`Congrats. Your search returned a single person. You'll be sent to the menu options upon clicking OK.\n\n${displayPeople(listofPeople)}`);
+      alert(`There was only a single person that was found, and push Ok to keep going.\n\n${displayPeople(listofPeople)}`);
       mainMenu(confirmedPerson, people);
       }
       else{
-      alert(`Here is the list of person(s) based on your search. You'll be asked if you know the name of the person upon entering OK.\n\n${displayPeople(listofPeople)}`, autoValid);
+      alert(`The list of person(s) you search for. Push Ok to keep going.\n\n${displayPeople(listofPeople)}`, autoValid);
       app(people);
       }
        break;
     case "F":
       listofPeople = searchByOccupation(people);
       if(listofPeople.length == "0"){
-      alert("No person has this specific trait. Let's do a single trait search again.");
+      alert("Didn't find a person have that trait you put in. Let's do an other trait search again.");
       searchListOfTraits(people);
       }
       else if(listofPeople.length == 1){
       confirmedPerson = listofPeople[0];
-      alert(`Congrats. Your search returned a single person. You'll be sent to the menu options upon clicking OK.\n\n${displayPeople(listofPeople)}`);
+      alert(`There was only a single person that was found, and push Ok to keep going.\n\n${displayPeople(listofPeople)}`);
       mainMenu(confirmedPerson, people);
       }
       else{
-      alert(`Here is the list of person(s) based on your search. You'll be asked if you know the name of the person upon entering OK.\n\n${displayPeople(listofPeople)}`, autoValid);
+      alert(`The list of person(s) you search for. Push Ok to keep going\n\n${displayPeople(listofPeople)}`, autoValid);
       app(people);
       }
     break;
