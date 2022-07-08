@@ -91,7 +91,7 @@ function searchByName(people){
 
 //Function for single criteron trait search
 function searchListOfTraits(people) {
-  let traitSelection = promptFor("Please enter in a number for one of the following trait options:\n A: dob\n B: gender\n C: height\n D: weight\n E: eye color\n F: occupation", autoValid);
+  let traitSelection = promptFor("Please pick a letter for one of the following trait options:\n A: dob\n B: gender\n C: height\n D: weight\n E: eye color\n F: occupation", autoValid);
   let listofPeople = [];
   let confirmedPerson = [];
   switch(traitSelection) {
@@ -103,18 +103,18 @@ function searchListOfTraits(people) {
       }
       else if(listofPeople.length == 1){
       confirmedPerson = listofPeople[0];
-      alert(`Congrats. Your search returned a single person. You'll be sent to the menu options upon clicking OK.\n\n${displayPeople(listofPeople)}`);
+      alert(`The letter pick in your search returned a single person. If you want to keep going then click Ok.\n\n${displayPeople(listofPeople)}`);
       mainMenu(confirmedPerson, people);
       }
       else{
-      alert(`Here is the list of person(s) based on your search. You'll be asked if you know the name of the person upon entering OK.\n\n${displayPeople(listofPeople)}`, autoValid);
+      alert(`Here is the list of person(s) based on your search. If you know the name of the person upon entering click Ok.\n\n${displayPeople(listofPeople)}`, autoValid);
       app(people);
       }
     break;
     case "B":
       listofPeople = searchByGender(people);
       if(listofPeople.length == "0"){
-      alert("No person has this specific trait. Let's do a single trait search again.");
+      alert("No person have been found. Let's do an other trait search again.");
       searchListOfTraits(people);
       }
       else if(listofPeople.length == 1){
