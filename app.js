@@ -527,6 +527,7 @@ function yesNo(input){
   }
 }
 
+
 // helper function to pass in as default promptFor validation.
 //this will always return true for all inputs.
 function autoValid(input){
