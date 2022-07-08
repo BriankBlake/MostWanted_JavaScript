@@ -313,7 +313,7 @@ function multipleTraitSearch(people) {
       }
     break;
     default:
-    alert("Invalid entry try again.");
+    alert("Invalid entry.");
     multipleTraitSearch(people);
     break;
   }
